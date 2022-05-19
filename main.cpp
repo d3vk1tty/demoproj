@@ -1,11 +1,14 @@
 #include <iostream>
 #include <adder.h>
+#include <GLFW/glfw3.h>
 
 float add(float a, float b);
 
 int main() { 
 	std::cout << "helloworld" << std::endl; 
 	std::cout << add(72.1f, 42.6f) << std::endl;
+
+	GLFWwindow *window;
 	return 0; 
 }
 
