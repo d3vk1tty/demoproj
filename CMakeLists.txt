@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.16.3)
 
-project(demoproj)
+project(DEMOPROJ VERSION 1.0)
+
+configure_file(demoprojConfig.h.in demoprojConfig.h)
 
 add_executable(${PROJECT_NAME} main.cpp)
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})
 
 # DOWNLOAD ALL THE SUBMODULES
 find_package(Git QUIET)

@@ -40,6 +40,8 @@ some code
 
 * 0.0.1
     * Work in progress
+    * can display a black box
+    * version control is working
 
 ## Meta
 
