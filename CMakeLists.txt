@@ -15,10 +15,9 @@ target_include_directories(${PROJECT_NAME}
 )
 
 target_link_directories(${PROJECT_NAME} 
-    PRIVATE Adder
+    PRIVATE Adder 
     PRIVATE external/glfw/include
     )
 
-target_link_libraries(${PROJECT_NAME} adder)
-
+target_link_libraries(${PROJECT_NAME} adder glfw)
 
