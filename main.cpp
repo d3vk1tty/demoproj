@@ -14,6 +14,7 @@ int main(int argc, char* argv[]) {
     }
 
     window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+
     if (!window) {
         fprintf( stderr, "Failed to open GLFW window\n" );
         glfwTerminate();
