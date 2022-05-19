@@ -18,7 +18,8 @@ OS X & Linux:
 Windows:
 
 ```sh
-
+cd out\build\x64-debug
+.\demoproj.exe
 ```
 
 ## Usage example
