@@ -10,7 +10,7 @@ int main() {
         exit( EXIT_FAILURE );
     }
 
-	window = glfwCreateWindow( 300, 300, "Gears", NULL, NULL );
+    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
     if (!window) {
         fprintf( stderr, "Failed to open GLFW window\n" );
         glfwTerminate();
