@@ -10,13 +10,15 @@ One to two paragraph statement about your product and what it does.
 OS X & Linux:
 
 ```sh
-some code
+./configure.sh
+./build.sh
+./run.sh
 ```
 
 Windows:
 
 ```sh
-some code
+
 ```
 
 ## Usage example
