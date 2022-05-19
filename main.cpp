@@ -1,7 +1,10 @@
 #include <iostream>
 #include <GLFW/glfw3.h>
+#include <demoprojConfig.h>
 
-int main() { 
+int main(int argc, char* argv[]) {
+
+    std::cout << argv[0] << " Version: " << DEMOPROJ_VERSION_MAJOR << "." << DEMOPROJ_VERSION_MINOR << std::endl;
 
 	GLFWwindow *window;
 	
@@ -10,7 +13,8 @@ int main() {
         exit( EXIT_FAILURE );
     }
 
-	window = glfwCreateWindow( 300, 300, "Gears", NULL, NULL );
+    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+
     if (!window) {
         fprintf( stderr, "Failed to open GLFW window\n" );
         glfwTerminate();

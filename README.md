@@ -10,13 +10,16 @@ One to two paragraph statement about your product and what it does.
 OS X & Linux:
 
 ```sh
-some code
+./configure.sh
+./build.sh
+./run.sh
 ```
 
 Windows:
 
 ```sh
-some code
+cd out\build\x64-debug
+.\demoproj.exe
 ```
 
 ## Usage example
@@ -30,13 +33,16 @@ _For more examples and usage, please refer to the [Wiki][wiki]._
 Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
 
 ```sh
-some code
+git submodule add https://github.com/glfw/glfw.git external/glfw
+git submodule add https://github.com/boostorg/beast.git external/boost
 ```
 
 ## Release History
 
 * 0.0.1
     * Work in progress
+    * can display a black box
+    * version control is working
 
 ## Meta
 
