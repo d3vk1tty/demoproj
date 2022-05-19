@@ -1,42 +1,41 @@
 #include <iostream>
+#include <GLFW/glfw3.h>
 
-#include "GLFW/glfw3.h"
+int main() { 
 
-void
-error_callback(int error, const char* description)
-{
-   puts(description);
+	GLFWwindow *window;
+	
+    if( !glfwInit() )
+    {
+        fprintf( stderr, "Failed to initialize GLFW\n" );
+        exit( EXIT_FAILURE );
+    }
+
+	window = glfwCreateWindow( 300, 300, "Gears", NULL, NULL );
+    if (!window)
+    {
+        fprintf( stderr, "Failed to open GLFW window\n" );
+        glfwTerminate();
+        exit( EXIT_FAILURE );
+    }
+
+	    // Main loop
+    while( !glfwWindowShouldClose(window) )
+    {
+        // // Draw gears
+        // draw();
+
+        // // Update animation
+        // animate();
+
+        // Swap buffers
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    // Terminate GLFW
+    glfwTerminate();
+
+	return 0; 
 }
 
-int
-main()
-{
-   glfwSetErrorCallback(error_callback);
-
-   if(!glfwInit())
-   {
-      std::cout << "ERROR: GLFW failed to Initialize" << std::endl;
-      //TODO: Logging
-      return -1;
-   }
-
-   char *WindowTitle = "Hello World";
-   GLFWwindow* Window = glfwCreateWindow(960, 540, WindowTitle, NULL, NULL);
-
-   if(!Window)
-   {
-      glfwTerminate();
-      //TODO: Logging
-      return -1;
-   }
-
-   //TODO: Running loop
-
-   //NOTE: Yay
-   std::cout << "Window Created successfully" << std::endl;
-   glfwTerminate();
-
-   system("pause");
-
-   return 0;
-}
